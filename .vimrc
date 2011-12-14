@@ -34,7 +34,7 @@ Bundle 'mileszs/ack.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
-" Bundle 'Wombat'
+Bundle 'Wombat'
 " Bundle 'surround.vim'
 " Bundle 'SuperTab'
 Bundle 'L9'
@@ -53,7 +53,7 @@ au FileType ruby setlocal tw=80 ts=2 sts=2 sw=2
 au FileType python setlocal tw=80 ts=4 sts=4 sw=4
 
 " plugin settings
-colorscheme inkpot
+colorscheme wombat
 
 " super tab
 let g:SuperTabDefaultCompletionType = "context"
