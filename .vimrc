@@ -29,8 +29,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'xolox/vim-easytags'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
@@ -52,9 +55,18 @@ let g:tex_flavor='latex'
 au FileType ruby setlocal tw=80 ts=2 sts=2 sw=2
 au FileType python setlocal tw=80 ts=4 sts=4 sw=4
 
-" plugin settings
+" remap <leader>
+let mapleader = ","
+
+" colorscheme settings
 colorscheme wombat
 
 " super tab
 let g:SuperTabDefaultCompletionType = "context"
+
+" gundo stuff
+map <leader>g :GundoToggle<CR>
+
+" nerdtree stuff
+map <leader>n :NERDTreeToggle<CR>
 
