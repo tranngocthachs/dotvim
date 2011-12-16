@@ -4,9 +4,6 @@ syntax on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set autoindent
 
-" make vim :! recognises aliases
-set shellcmdflag=-ic
-
 " wildmenu enables a menu at the bottom
 set wildmenu
 set wildmode=list:longest,full
