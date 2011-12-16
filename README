@@ -1,1 +1,23 @@
 An attempt to organise my vim files
+
+INSTALLATION
+
+1. Clone the repo to ~/.vim (if haven't done already)
+    
+    git clone http://github.com/tranngocthachs/dotvim ~/.vim
+
+2. Symlink .vimrc and .gvimrc
+
+    ln -s ~/.vim/.vimrc ~/.vimrc 
+
+    ln -s ~/.vim/.gvimrc ~/.gvimrc 
+
+1. Install Vundle with
+
+    git clone http://github.com/gmarik/vundle.git bundle/vundle
+    
+assuming pwd is the top level folder
+
+2. Run Vim and type :BundleInstall to install the plugins with Vundle. Ignore
+complaints about colorscheme since none has been installed yet. After running
+:BundleInstall one shouldn't see this error anymore.
