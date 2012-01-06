@@ -33,17 +33,20 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'xolox/vim-easytags'
+Bundle 'rson/vim-conque'
+Bundle 'ivanov/vim-ipython'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'Wombat'
+Bundle 'taglist.vim'
 " Bundle 'surround.vim'
 " Bundle 'SuperTab'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://repo.or.cz/vcscommand'
 
 filetype plugin indent on     " required! 
 
@@ -70,3 +73,6 @@ map <leader>g :GundoToggle<CR>
 " nerdtree stuff
 map <leader>n :NERDTreeToggle<CR>
 
+" command for a conque ipython console
+command! IPyConsole ConqueTermSplit ipython console --colors=Linux
+command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
