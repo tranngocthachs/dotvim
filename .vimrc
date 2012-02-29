@@ -34,18 +34,20 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/camelcasemotion'
+Bundle 'rson/vim-conque'
 Bundle 'ivanov/vim-ipython'
-Bundle 'lrvick/Conque-Shell'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'Wombat'
+Bundle 'taglist.vim'
 " Bundle 'surround.vim'
 " Bundle 'SuperTab'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://repo.or.cz/vcscommand'
 
 filetype plugin indent on     " required! 
 
@@ -90,3 +92,7 @@ map <leader>n :NERDTreeToggle<CR>
 set ignorecase
 set smartcase
 set incsearch
+
+" command for a conque ipython console
+command! IPyConsole ConqueTermSplit ipython console --colors=Linux
+command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux

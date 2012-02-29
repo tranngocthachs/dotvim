@@ -16,7 +16,7 @@ INSTALLATION
 
     git clone http://github.com/gmarik/vundle.git bundle/vundle
     
-assuming pwd is the top level folder
+assuming pwd is ~/.vim
 
 2. Run Vim and type :BundleInstall to install the plugins with Vundle. Ignore
 complaints about colorscheme since none has been installed yet. After running
