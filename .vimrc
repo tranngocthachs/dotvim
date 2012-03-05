@@ -34,6 +34,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/camelcasemotion'
 Bundle 'rson/vim-conque'
 Bundle 'ivanov/vim-ipython'
 Bundle 'vim-scripts/netrw.vim'
@@ -72,11 +73,30 @@ colorscheme solarized
 " super tab
 let g:SuperTabDefaultCompletionType = "context"
 
-" gundo stuff
+" remap key for gundo
 map <leader>g :GundoToggle<CR>
 
-" nerdtree stuff
+" remap key for nerdtree
 map <leader>n :NERDTreeToggle<CR>
+
+" remap motion key for camelcase
+" map w <Plug>CamelCaseMotion_w
+" map b <Plug>CamelCaseMotion_b
+" map e <Plug>CamelCaseMotion_e
+" sunmap w
+" sunmap b
+" sunmap e
+" 
+" omap iw <Plug>CamelCaseMotion_iw 
+" xmap iw <Plug>CamelCaseMotion_iw 
+" omap ib <Plug>CamelCaseMotion_ib 
+" xmap ib <Plug>CamelCaseMotion_ib 
+" omap ie <Plug>CamelCaseMotion_ie 
+" xmap ie <Plug>CamelCaseMotion_ie
+
+set ignorecase
+set smartcase
+set incsearch
 
 " command for a conque ipython console
 command! IPyConsole ConqueTermSplit ipython console --colors=Linux
