@@ -3,6 +3,7 @@ set number
 syntax on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set autoindent
+set background=dark
 
 " wildmenu enables a menu at the bottom
 set wildmenu
@@ -35,6 +36,10 @@ Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'rson/vim-conque'
 Bundle 'ivanov/vim-ipython'
+Bundle 'vim-scripts/netrw.vim'
+Bundle 'ervandew/screen'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/a.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
@@ -62,7 +67,7 @@ au FileType python setlocal tw=80 ts=4 sts=4 sw=4
 let mapleader = ","
 
 " colorscheme settings
-colorscheme wombat
+colorscheme solarized
 
 " super tab
 let g:SuperTabDefaultCompletionType = "context"
