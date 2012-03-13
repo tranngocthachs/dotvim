@@ -41,6 +41,8 @@ Bundle 'vim-scripts/netrw.vim'
 Bundle 'ervandew/screen'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/a.vim'
+Bundle 'gregsexton/gitv'
+Bundle 'int3/vim-extradite'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
