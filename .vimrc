@@ -34,7 +34,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'vim-scripts/camelcasemotion'
 Bundle 'rson/vim-conque'
 Bundle 'ivanov/vim-ipython'
 Bundle 'vim-scripts/netrw.vim'
@@ -43,18 +42,12 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/a.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'int3/vim-extradite'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
 " vim-scripts repos
 Bundle 'Wombat'
 Bundle 'taglist.vim'
-" Bundle 'surround.vim'
-" Bundle 'SuperTab'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-" Bundle 'git://repo.or.cz/vcscommand'
 
 filetype plugin indent on     " required! 
 
