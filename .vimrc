@@ -10,7 +10,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 
 " vundle and plugins stuff
 filetype off
@@ -42,6 +42,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/a.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'int3/vim-extradite'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'jpalardy/vim-slime'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " vim-scripts repos
 Bundle 'Wombat'
