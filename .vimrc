@@ -78,21 +78,6 @@ map <leader>g :GundoToggle<CR>
 " remap key for nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
-" remap motion key for camelcase
-" map w <Plug>CamelCaseMotion_w
-" map b <Plug>CamelCaseMotion_b
-" map e <Plug>CamelCaseMotion_e
-" sunmap w
-" sunmap b
-" sunmap e
-" 
-" omap iw <Plug>CamelCaseMotion_iw 
-" xmap iw <Plug>CamelCaseMotion_iw 
-" omap ib <Plug>CamelCaseMotion_ib 
-" xmap ib <Plug>CamelCaseMotion_ib 
-" omap ie <Plug>CamelCaseMotion_ie 
-" xmap ie <Plug>CamelCaseMotion_ie
-
 set ignorecase
 set smartcase
 set incsearch
@@ -100,3 +85,17 @@ set incsearch
 " command for a conque ipython console
 command! IPyConsole ConqueTermSplit ipython console --colors=Linux
 command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
+
+" loading of system specific settings
+
+python << EOF
+import os
+import vim
+
+vim_home = os.path.join(os.path.dirname(os.environ['MYVIMRC']), '.vim')
+local_vimrc = os.path.join(vim_home, '.local_vimrc')
+
+if os.path.exists(local_vimrc):
+    vim.command('source %s' % local_vimrc)
+
+EOF
