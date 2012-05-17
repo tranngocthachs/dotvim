@@ -28,7 +28,8 @@ set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 " vundle and plugins stuff
 filetype off
 
-set rtp+=./bundle/vundle/
+let s:vundle_path = s:portable . '/bundle/vundle'
+execute "set rtp+=".s:vundle_path
 call vundle#rc(s:portable . "/bundle")
 
 " let Vundle manage Vundle
