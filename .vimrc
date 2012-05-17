@@ -100,6 +100,9 @@ map <leader>n :NERDTreeToggle<CR>
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" fast-mode for conque term
+let g:ConqueTerm_FastMode = 1
+
 " command for a conque ipython console
 command! IPyConsole ConqueTermSplit ipython console --colors=Linux
 command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
@@ -117,5 +120,4 @@ if os.path.exists(local_vimrc):
     vim.command('source %s' % local_vimrc)
 
 EOF
-
 
