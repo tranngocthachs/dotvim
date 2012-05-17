@@ -2,12 +2,16 @@ set nocompatible
 set number
 syntax on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set ignorecase
+set smartcase
+set incsearch
 set autoindent
 set background=dark
 
 " wildmenu enables a menu at the bottom
 set wildmenu
 set wildmode=list:longest,full
+set wildignore+=.git,.svn,_build,tnglogs
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
@@ -72,15 +76,19 @@ colorscheme solarized
 " super tab
 let g:SuperTabDefaultCompletionType = "context"
 
+" command-t settings
+let g:CommandTMaxFiles = 100000
+let g:CommandTMaxHeight = 20
+
 " remap key for gundo
 map <leader>g :GundoToggle<CR>
 
 " remap key for nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
-set ignorecase
-set smartcase
-set incsearch
+" auto close preview omni complete window
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " command for a conque ipython console
 command! IPyConsole ConqueTermSplit ipython console --colors=Linux
