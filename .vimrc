@@ -1,3 +1,12 @@
+" set default 'runtimepath' (without ~/.vim folders)
+let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after', $VIM, $VIMRUNTIME, $VIM)
+
+" what is the name of the directory containing this file?
+let s:portable = expand('<sfile>:p:h')
+
+" add the directory to 'runtimepath'
+let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
+
 set nocompatible
 set number
 syntax on
@@ -19,8 +28,8 @@ set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 " vundle and plugins stuff
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=./bundle/vundle/
+call vundle#rc(s:portable . "/bundle")
 
 " let Vundle manage Vundle
 " required! 
@@ -100,10 +109,12 @@ python << EOF
 import os
 import vim
 
-vim_home = os.path.join(os.path.dirname(os.environ['MYVIMRC']), '.vim')
+vim_home = vim.eval('s:portable')
 local_vimrc = os.path.join(vim_home, '.local_vimrc')
 
 if os.path.exists(local_vimrc):
     vim.command('source %s' % local_vimrc)
 
 EOF
+
+

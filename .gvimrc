@@ -1,6 +1,4 @@
 set anti
-set lines=65
-set columns=90
 colorscheme solarized
 set go-=T
 set nomousehide

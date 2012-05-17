@@ -1,0 +1,5 @@
+*.[oa]
+*~
+*.sw[po]
+.local_vimrc
+bundle
