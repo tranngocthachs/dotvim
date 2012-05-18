@@ -29,8 +29,8 @@ set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 filetype off
 
 let s:vundle_path = s:portable . '/bundle/vundle'
-execute "set rtp+=".s:vundle_path
-call vundle#rc(s:portable . "/bundle")
+execute 'set rtp+=' . s:vundle_path
+call vundle#rc(s:portable . '/bundle')
 
 " let Vundle manage Vundle
 " required! 
@@ -108,6 +108,6 @@ command! IPyConsole ConqueTermSplit ipython console --colors=Linux
 command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 
 " loading of system specific settings
-if filereadable(s:portable.'/.local_vimrc')
-    execute 'source '.s:portable.'/.local_vimrc'
+if isdirectory(s:portable . '/.local_vim')
+    execute 'source '.s:portable . '/.local_vimrc'
 endif
