@@ -108,16 +108,6 @@ command! IPyConsole ConqueTermSplit ipython console --colors=Linux
 command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 
 " loading of system specific settings
-
-python << EOF
-import os
-import vim
-
-vim_home = vim.eval('s:portable')
-local_vimrc = os.path.join(vim_home, '.local_vimrc')
-
-if os.path.exists(local_vimrc):
-    vim.command('source %s' % local_vimrc)
-
-EOF
-
+if filereadable(s:portable.'/.local_vimrc')
+    execute 'source '.s:portable.'/.local_vimrc'
+endif
