@@ -107,6 +107,10 @@ let g:ConqueTerm_FastMode = 1
 command! IPyConsole ConqueTermSplit ipython console --colors=Linux
 command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 
+" a.vim stuff
+nmap <Leader>a :A<CR>
+let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
+
 " loading of system specific settings
 if filereadable(s:portable . '/.local_vimrc')
     execute 'source ' . s:portable . '/.local_vimrc'
