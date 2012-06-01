@@ -60,6 +60,11 @@ Bundle 'int3/vim-extradite'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+" snipmate
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
 
 " vim-scripts repos
 Bundle 'Wombat'
