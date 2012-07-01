@@ -14,6 +14,9 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 set autoindent
 set background=dark
 
