@@ -60,6 +60,7 @@ Bundle 'int3/vim-extradite'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Bundle 'chazy/cscope_maps'
 
 " vim-scripts repos
 Bundle 'Wombat'
