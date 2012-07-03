@@ -15,8 +15,8 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+" <Ctrl-l> removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR>
 set autoindent
 set background=dark
 
