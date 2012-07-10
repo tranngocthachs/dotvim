@@ -127,3 +127,10 @@ set clipboard=unnamed
 if filereadable(s:portable . '/.local_vimrc')
     execute 'source ' . s:portable . '/.local_vimrc'
 endif
+
+" work-around incomplete terminfo databases                                     
+" particulalry useful when under `screen`, which may or may not be attached
+" to a physical terminal capable of 256color mode.                                 
+if match($TERMCAP, 'Co#256:') != -1
+    set t_Co=256                                                                
+endif
