@@ -25,8 +25,33 @@ set wildmenu
 set wildmode=list:longest,full
 set wildignore+=.git,.svn,_build,tnglogs
 
-" Use the same symbols as TextMate for tabstops and EOLs
+" keep visible lines around current lines
+set scrolloff=3
+set ruler
+
+" persistent undo hist
+set undofile
+
+" allow backspacing over everything
+set backspace=indent,eol,start
+
+" allow using tab to jump to matching paren
+nnoremap <tab> %
+vnoremap <tab> %
+
+" make j, k work with wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" mapping jj to esc
+inoremap jj <ESC>
+
+" use the same symbols as TextMate for tabstops and EOLs
 set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
+
+" make regex consistent in search
+nnoremap / /\v
+vnoremap / /\v
 
 " vundle and plugins stuff
 filetype off
