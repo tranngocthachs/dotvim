@@ -146,7 +146,7 @@ nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
 " system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " loading of system specific settings
 if filereadable(s:portable . '/.local_vimrc')
