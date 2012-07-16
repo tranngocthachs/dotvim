@@ -89,6 +89,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'chazy/cscope_maps'
+Bundle 'jnwhiteh/vim-golang'
 " snipmate
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
