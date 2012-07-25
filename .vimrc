@@ -35,10 +35,6 @@ set undofile
 " allow backspacing over everything
 set backspace=indent,eol,start
 
-" allow using tab to jump to matching paren
-nnoremap <tab> %
-vnoremap <tab> %
-
 " make j, k work with wrapped lines
 nnoremap j gj
 nnoremap k gk
