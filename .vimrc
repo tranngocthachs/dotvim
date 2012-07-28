@@ -84,13 +84,9 @@ Bundle 'int3/vim-extradite'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
-Bundle 'chazy/cscope_maps'
+"Bundle 'chazy/cscope_maps'
 Bundle 'jnwhiteh/vim-golang'
-" snipmate
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'honza/snipmate-snippets'
-Bundle 'garbas/vim-snipmate'
+Bundle 'tranngocthachs/gtags-cscope-vim-plugin'
 
 " vim-scripts repos
 Bundle 'Wombat'
@@ -142,11 +138,11 @@ command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
-" using c-m for snipmate trigger
-let g:snips_trigger_key='<c-m>'
-
 " system clipboard
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+
+" key map for yrshow
+nnoremap <silent> <Leader>p :YRShow<CR>
 
 " loading of system specific settings
 if filereadable(s:portable . '/.local_vimrc')
@@ -159,3 +155,8 @@ endif
 if match($TERMCAP, 'Co#256:') != -1
     set t_Co=256                                                                
 endif
+
+" central folder for swp, backup, and undo files
+set backupdir=~/tmp//,/tmp//
+set directory=~/tmp//,/tmp//
+set undodir=~/tmp//,/tmp//
