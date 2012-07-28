@@ -142,6 +142,9 @@ command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
+" using c-m for snipmate trigger
+let g:snips_trigger_key='<c-m>'
+
 " system clipboard
 set clipboard=unnamedplus
 
