@@ -87,6 +87,7 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "Bundle 'chazy/cscope_maps'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'tranngocthachs/gtags-cscope-vim-plugin'
+Bundle 'bdd/vim-scala'
 
 " vim-scripts repos
 Bundle 'Wombat'
