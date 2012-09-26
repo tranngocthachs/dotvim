@@ -145,6 +145,12 @@ let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,
 " key map for yrshow
 nnoremap <silent> <Leader>p :YRShow<CR>
 
+" enable gtags
+let GtagsCscope_Auto_Load = 1
+let GtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+set cscopetag
+
 " loading of system specific settings
 if filereadable(s:portable . '/.local_vimrc')
     execute 'source ' . s:portable . '/.local_vimrc'
@@ -161,3 +167,6 @@ endif
 set backupdir=~/tmp//,/tmp//
 set directory=~/tmp//,/tmp//
 set undodir=~/tmp//,/tmp//
+
+" using cpaste for slime-ipython sending
+let g:slime_python_ipython = 1
