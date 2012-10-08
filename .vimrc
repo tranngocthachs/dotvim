@@ -125,8 +125,8 @@ map <leader>g :GundoToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
 
 " auto close preview omni complete window
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " fast-mode for conque term
 let g:ConqueTerm_FastMode = 1
