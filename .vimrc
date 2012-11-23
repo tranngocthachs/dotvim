@@ -85,10 +85,10 @@ Bundle 'int3/vim-extradite'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
-"Bundle 'chazy/cscope_maps'
+Bundle 'chazy/cscope_maps'
 Bundle 'jnwhiteh/vim-golang'
-Bundle 'tranngocthachs/gtags-cscope-vim-plugin'
-Bundle 'bdd/vim-scala'
+"Bundle 'tranngocthachs/gtags-cscope-vim-plugin'
+Bundle 'mattdenner/vim-scala'
 
 " vim-scripts repos
 Bundle 'Wombat'
