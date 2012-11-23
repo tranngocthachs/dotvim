@@ -175,3 +175,7 @@ let g:slime_python_ipython = 1
 " Leader-m to make
 command! MakeCOpen make! | copen
 map <Leader>m :MakeCOpen<CR>
+
+" set slime to use tmux
+let g:slime_target = "tmux"
+
