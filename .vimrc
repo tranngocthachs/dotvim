@@ -19,6 +19,7 @@ set hlsearch
 nnoremap <silent> <C-l> :nohl<CR>
 set autoindent
 set background=dark
+set visualbell
 
 " wildmenu enables a menu at the bottom
 set wildmenu
@@ -140,7 +141,7 @@ nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
 " system clipboard
-"set clipboard=unnamedplus
+"set clipboard=unnamed
 
 " key map for yrshow
 nnoremap <silent> <Leader>p :YRShow<CR>
@@ -170,3 +171,7 @@ set undodir=~/tmp//,/tmp//
 
 " using cpaste for slime-ipython sending
 let g:slime_python_ipython = 1
+
+" Leader-m to make
+command! MakeCOpen make! | copen
+map <Leader>m :MakeCOpen<CR>
