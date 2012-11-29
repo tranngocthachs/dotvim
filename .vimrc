@@ -19,7 +19,6 @@ set hlsearch
 nnoremap <silent> <C-l> :nohl<CR>
 set autoindent
 set background=dark
-set visualbell
 
 " wildmenu enables a menu at the bottom
 set wildmenu
