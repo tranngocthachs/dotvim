@@ -178,3 +178,7 @@ map <Leader>m :MakeCOpen<CR>
 " set slime to use tmux
 let g:slime_target = "tmux"
 
+" turn on spell check
+set spell
+set spelllang=en_us,en_gb
+
