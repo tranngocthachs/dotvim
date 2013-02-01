@@ -156,6 +156,10 @@ if filereadable(s:portable . '/.local_vimrc')
     execute 'source ' . s:portable . '/.local_vimrc'
 endif
 
+" turn on reading of project's specific .vimrc
+set exrc
+set secure
+
 " work-around incomplete terminfo databases                                     
 " particulalry useful when under `screen`, which may or may not be attached
 " to a physical terminal capable of 256color mode.                                 
