@@ -58,7 +58,7 @@ call vundle#rc(s:portable . '/bundle')
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'tranngocthachs/vundle'
+Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
