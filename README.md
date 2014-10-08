@@ -5,7 +5,7 @@ Installation
 --------
 
 1. Clone the repo
-    
+
         $ git clone http://github.com/tranngocthachs/dotvim ~/.vim
 
 2. Init submodule for vundle

@@ -205,4 +205,4 @@ vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 
 " disable whitespace highlighting by default
-let g:better_whitespace_enabled = 1
+let g:better_whitespace_enabled = 0
