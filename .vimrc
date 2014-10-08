@@ -52,55 +52,63 @@ vnoremap / /\v
 " vundle and plugins stuff
 filetype off
 
-let s:vundle_path = s:portable . '/bundle/vundle'
+let s:vundle_path = s:portable . '/bundle/Vundle.vim'
 execute 'set rtp+=' . s:vundle_path
-call vundle#rc(s:portable . '/bundle')
+call vundle#begin(s:portable . '/bundle')
 
 " let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" required!
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
 "
 " repos on github
-Bundle 'ciaranm/inkpot'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'mileszs/ack.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'rson/vim-conque'
-"Bundle 'ivanov/vim-ipython'
-Bundle 'vim-scripts/netrw.vim'
-Bundle 'ervandew/screen'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/a.vim'
-Bundle 'gregsexton/gitv'
-Bundle 'int3/vim-extradite'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'jpalardy/vim-slime'
-Bundle 'LaTeX-Box-Team/LaTeX-Box'
-Bundle 'chazy/cscope_maps'
-Bundle 'jnwhiteh/vim-golang'
-"Bundle 'tranngocthachs/gtags-cscope-vim-plugin'
-Bundle 'mattdenner/vim-scala'
+Plugin 'ciaranm/inkpot'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'mileszs/ack.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'basepi/vim-conque'
+"Plugin 'ivanov/vim-ipython'
+Plugin 'vim-scripts/netrw.vim'
+"Plugin 'ervandew/screen'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/a.vim'
+"Plugin 'gregsexton/gitv'
+"Plugin 'int3/vim-extradite'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'jpalardy/vim-slime'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'chazy/cscope_maps'
+Plugin 'jnwhiteh/vim-golang'
+"Plugin 'tranngocthachs/gtags-cscope-vim-plugin'
+Plugin 'mattdenner/vim-scala'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-dispatch'
+Plugin 'gavinbeatty/dragvisuals.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " vim-scripts repos
-Bundle 'Wombat'
-Bundle 'taglist.vim'
+Plugin 'Wombat'
+Plugin 'taglist.vim'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 
-filetype plugin indent on     " required! 
+call vundle#end()
+filetype plugin indent on     " required!
 
 
 " File type stuff
 au FileType text setlocal tw=80 spell spelllang=en_gb
 au FileType tex setlocal tw=80 spell spelllang=en_gb
+au BufRead,BufNewFile *.md set filetype=markdown
+au FileType markdown setlocal tw=80 spell spelllang=en_gb
+au FileType text setlocal tw=80 spell spelllang=en_gb
 let g:tex_flavor='latex'
 au FileType ruby setlocal tw=80 ts=2 sts=2 sw=2
 au FileType python setlocal tw=80 ts=4 sts=4 sw=4
@@ -160,11 +168,11 @@ endif
 set exrc
 set secure
 
-" work-around incomplete terminfo databases                                     
+" work-around incomplete terminfo databases
 " particulalry useful when under `screen`, which may or may not be attached
-" to a physical terminal capable of 256color mode.                                 
+" to a physical terminal capable of 256color mode.
 if match($TERMCAP, 'Co#256:') != -1
-    set t_Co=256                                                                
+    set t_Co=256
 endif
 
 " central folder for swp, backup, and undo files
@@ -177,7 +185,7 @@ let g:slime_python_ipython = 1
 
 " Leader-m to make
 command! MakeCOpen make! | copen
-map <Leader>m :MakeCOpen<CR>
+map <Leader>m :Make<CR>
 
 " set slime to use tmux
 let g:slime_target = "tmux"
@@ -186,3 +194,15 @@ let g:slime_target = "tmux"
 set spell
 set spelllang=en_us,en_gb
 
+" syntastic mode should be passive
+let g:syntastic_mode_map = {'mode': 'passive'}
+
+" dragvisuals stuff
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+
+" disable whitespace highlighting by default
+let g:better_whitespace_enabled = 1
