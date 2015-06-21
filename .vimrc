@@ -23,7 +23,7 @@ set background=dark
 " wildmenu enables a menu at the bottom
 set wildmenu
 set wildmode=list:longest,full
-set wildignore+=.git,.svn,_build,tnglogs
+set wildignore+=.git,.svn,_build,tnglogs,*.class,*.o,*.obj
 
 " keep visible lines around current lines
 set scrolloff=3
@@ -92,6 +92,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-dispatch'
 Plugin 'gavinbeatty/dragvisuals.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'rizzatti/dash.vim'
 
 " vim-scripts repos
 Plugin 'Wombat'
@@ -104,14 +105,14 @@ filetype plugin indent on     " required!
 
 
 " File type stuff
-au FileType text setlocal tw=80 spell spelllang=en_gb
-au FileType tex setlocal tw=80 spell spelllang=en_gb
+au FileType text setlocal tw=100 spell spelllang=en_us
+au FileType tex setlocal tw=100 spell spelllang=en_us
 au BufRead,BufNewFile *.md set filetype=markdown
-au FileType markdown setlocal tw=80 spell spelllang=en_gb
-au FileType text setlocal tw=80 spell spelllang=en_gb
+au FileType markdown setlocal tw=100 spell spelllang=en_us
+au FileType text setlocal tw=100 spell spelllang=en_us
 let g:tex_flavor='latex'
-au FileType ruby setlocal tw=80 ts=2 sts=2 sw=2
-au FileType python setlocal tw=80 ts=4 sts=4 sw=4
+au FileType ruby setlocal tw=100 ts=2 sts=2 sw=2
+au FileType python setlocal tw=100 ts=4 sts=4 sw=4
 
 " remap <leader>
 let mapleader = ","
@@ -148,16 +149,16 @@ nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
 " system clipboard
-"set clipboard=unnamed
+set clipboard=unnamed
 
 " key map for yrshow
 nnoremap <silent> <Leader>p :YRShow<CR>
 
 " enable gtags
-let GtagsCscope_Auto_Load = 1
-let GtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-set cscopetag
+" let GtagsCscope_Auto_Load = 1
+" let GtagsCscope_Auto_Map = 1
+" let GtagsCscope_Quiet = 1
+set cscopetag cscopeverbose
 
 " loading of system specific settings
 if filereadable(s:portable . '/.local_vimrc')
@@ -206,3 +207,8 @@ vmap  <expr>  D        DVB_Duplicate()
 
 " disable whitespace highlighting by default
 let g:better_whitespace_enabled = 0
+
+" ack stuff
+map <Leader>s :Ack!<CR>
+map <Leader>ss :AckFromSearch!<CR>
+"let g:ack_use_dispatch = 1
