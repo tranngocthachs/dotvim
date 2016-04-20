@@ -93,6 +93,10 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'gavinbeatty/dragvisuals.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 "Plugin 'rizzatti/dash.vim'
+Plugin 'lyuts/vim-rtags'
+Plugin 'embear/vim-foldsearch'
+Plugin 'godlygeek/tabular'
+
 
 " vim-scripts repos
 Plugin 'Wombat'
@@ -112,7 +116,8 @@ au FileType markdown setlocal tw=100 spell spelllang=en_us
 au FileType text setlocal tw=100 spell spelllang=en_us
 let g:tex_flavor='latex'
 au FileType ruby setlocal tw=100 ts=2 sts=2 sw=2
-au FileType python setlocal tw=100 ts=4 sts=4 sw=4
+au FileType python setlocal tw=0 ts=4 sts=4 sw=4
+set colorcolumn=100
 
 " remap <leader>
 let mapleader = ","
@@ -149,7 +154,7 @@ nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
 
 " system clipboard
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " key map for yrshow
 nnoremap <silent> <Leader>p :YRShow<CR>
