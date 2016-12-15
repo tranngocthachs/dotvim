@@ -58,7 +58,7 @@ call vundle#begin(s:portable . '/bundle')
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 "
@@ -96,6 +96,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'lyuts/vim-rtags'
 Plugin 'embear/vim-foldsearch'
 Plugin 'godlygeek/tabular'
+Plugin 'Olical/vim-enmasse'
+Plugin 'embear/vim-localvimrc'
 
 
 " vim-scripts repos
@@ -138,6 +140,9 @@ map <leader>g :GundoToggle<CR>
 " remap key for nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
+" ignore files for NERDTree
+let NERDTreeIgnore=['\~$', '\.pyc$']
+
 " auto close preview omni complete window
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
@@ -152,6 +157,7 @@ command! IPyConsoleV ConqueTermVSplit ipython console --colors=Linux
 " a.vim stuff
 nmap <Leader>a :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:api,sfr:..'
+let g:alternateRelativeFiles = 1
 
 " system clipboard
 "set clipboard=unnamed
@@ -202,6 +208,7 @@ set spelllang=en_us,en_gb
 
 " syntastic mode should be passive
 let g:syntastic_mode_map = {'mode': 'passive'}
+let g:syntastic_auto_loc_list = 3
 
 " dragvisuals stuff
 vmap  <expr>  <LEFT>   DVB_Drag('left')
@@ -211,9 +218,16 @@ vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 
 " disable whitespace highlighting by default
-let g:better_whitespace_enabled = 0
+"let g:better_whitespace_enabled = 0
 
 " ack stuff
 map <Leader>s :Ack!<CR>
 map <Leader>ss :AckFromSearch!<CR>
 "let g:ack_use_dispatch = 1
+
+
+" align vertically by (
+set cino+=(0
+
+" loading local .vimrc file
+let g:localvimrc_name = [".vimrc", ".lvimrc"]
