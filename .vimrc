@@ -231,3 +231,4 @@ set cino+=(0
 
 " loading local .vimrc file
 let g:localvimrc_name = [".vimrc", ".lvimrc"]
+let g:localvimrc_persistent = 2
