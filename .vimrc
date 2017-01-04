@@ -97,7 +97,7 @@ Plugin 'lyuts/vim-rtags'
 Plugin 'embear/vim-foldsearch'
 Plugin 'godlygeek/tabular'
 Plugin 'Olical/vim-enmasse'
-Plugin 'embear/vim-localvimrc'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 " vim-scripts repos
@@ -229,6 +229,5 @@ map <Leader>ss :AckFromSearch!<CR>
 " align vertically by (
 set cino+=(0
 
-" loading local .vimrc file
-let g:localvimrc_name = [".vimrc", ".lvimrc"]
-let g:localvimrc_persistent = 2
+" editor config stuff
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
